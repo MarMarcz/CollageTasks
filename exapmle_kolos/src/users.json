@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Anna Kowalska",
+      "email": "anna.kowalska@example.com",
+      "role": "Administrator"
+    },
+    {
+      "id": 2,
+      "name": "Jan Nowak",
+      "email": "jan.nowak@example.com",
+      "role": "User"
+    },
+    {
+      "id": 3,
+      "name": "Ewa Wi\u015bniewska",
+      "email": "ewa.wisniewska@example.com",
+      "role": "User"
+    },
+    {
+      "id": 4,
+      "name": "Pawe\u0142 Zieli\u0144ski",
+      "email": "pawel.zielinski@example.com",
+      "role": "User"
+    },
+    {
+      "id": 5,
+      "name": "Zofia Mazur",
+      "email": "zofia.mazur@example.com",
+      "role": "User"
+    },
+    {
+      "id": 6,
+      "name": "Tomasz Wojciechowski",
+      "email": "tomasz.wojciechowski@example.com",
+      "role": "User"
+    },
+    {
+      "id": 7,
+      "name": "Julia Kowalczyk",
+      "email": "julia.kowalczyk@example.com",
+      "role": "User"
+    },
+    {
+      "id": 8,
+      "name": "Micha\u0142 Jankowski",
+      "email": "michal.jankowski@example.com",
+      "role": "User"
+    },
+    {
+      "id": 9,
+      "name": "Dorota Sikora",
+      "email": "dorota.sikora@example.com",
+      "role": "User"
+    },
+    {
+      "id": 10,
+      "name": "Marek Baran",
+      "email": "marek.baran@example.com",
+      "role": "Administrator"
+    }
+  ]
+}
