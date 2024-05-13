@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  todo-app:
+    image: diamol/ch06-todo-list
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example_password # Tutaj możesz wprowadzić swoje hasło
+    volumes:
+      - todo-db-data:/var/lib/postgresql/data
+
+volumes:
+  todo-db-data:
+
