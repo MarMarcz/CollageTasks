@@ -13,7 +13,7 @@ services:
     image: postgres
     restart: unless-stopped
     environment:
-      POSTGRES_PASSWORD: example_password # Tutaj możesz wprowadzić swoje hasło
+      POSTGRES_PASSWORD: example_password 
     volumes:
       - todo-db-data:/var/lib/postgresql/data
 
