@@ -16,3 +16,5 @@ Jeśli chcesz przetestować aplikację manualnie, możesz odwiedzić następują
 http://localhost:3000/people/
 http://localhost:3000/people/1
 http://localhost:3000/average
+
+//Nie zapomnij o node_modules
