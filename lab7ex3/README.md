@@ -7,7 +7,7 @@
 ## Instrukcja uruchomienia
 
 Sklonuj repozytorium:
-   git clone https://github.com/MarMarcz/CollageTasks/new/main/lab7ex3
+   git clone https://github.com/MarMarcz/CollageTasks/tree/main/lab7ex3
    cd traefik
 
 Następnie:
