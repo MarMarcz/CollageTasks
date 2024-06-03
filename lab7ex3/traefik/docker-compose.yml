@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  traefik:
+    image: traefik:v2.4
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - web
+
+  flask_app:
+    build: ../flask_app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.flask.rule=PathPrefix(`/flask`)"
+      - "traefik.http.routers.flask.entrypoints=web"
+      - "traefik.http.middlewares.flask-stripprefix.stripprefix.prefixes=/flask"
+      - "traefik.http.routers.flask.middlewares=flask-stripprefix"
+      - "traefik.http.services.flask.loadbalancer.server.port=5000"
+    networks:
+      - web
+
+  express_app:
+    build: ../express_app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.express.rule=PathPrefix(`/express`)"
+      - "traefik.http.routers.express.entrypoints=web"
+      - "traefik.http.middlewares.express-stripprefix.stripprefix.prefixes=/express"
+      - "traefik.http.routers.express.middlewares=express-stripprefix"
+      - "traefik.http.services.express.loadbalancer.server.port=3000"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
