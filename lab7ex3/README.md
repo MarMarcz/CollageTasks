@@ -15,8 +15,11 @@ docker-compose up --build
 
 Testowanie:
 http://localhost/flask/cars
+
 http://localhost/flask/cars?year=2020
+
 http://localhost/express/cars
+
 POST http://localhost/express/addCar
 {
   "make": "Toyota",
